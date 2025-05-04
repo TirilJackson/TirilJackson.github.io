@@ -1,184 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Immigration Resources in Massachusetts</title>
-  
+  <meta charset="UTF-8">
+  <title>Immigration Info</title>
   <style>
-    /* General Page Styling */
     body {
-        font-family: 'Arial', sans-serif;
-        background-color: #f0f8ff;
-        color: #343a40;
-        margin: 0;
-        padding: 0;
-        line-height: 1.6;
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+      color: #333;
+      margin: 0;
+      padding: 0;
     }
-
-    /* Header Styling */
     header {
-        background-color: #0069d9;
-        color: white;
-        padding: 30px;
-        text-align: center;
-        border-bottom: 4px solid #28a745;
+      background-color: #0069d9;
+      color: white;
+      padding: 20px;
+      text-align: center;
     }
-
-    header h1 {
-        font-size: 3em;
-        margin: 0;
-        font-weight: bold;
-    }
-
-    header p {
-        font-size: 1.2em;
-        margin-top: 10px;
-    }
-
-    /* Search Bar Section */
     .search {
-        margin: 30px auto;
-        text-align: center;
-        padding: 20px;
-        max-width: 600px;
+      text-align: center;
+      padding: 20px;
     }
-
     input[type="text"] {
-        padding: 10px;
-        width: 70%;
-        font-size: 1em;
-        border: 2px solid #28a745;
-        border-radius: 5px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        outline: none;
-        transition: border 0.3s ease;
+      padding: 10px;
+      width: 70%;
+      max-width: 400px;
+      border: 2px solid #28a745;
+      border-radius: 5px;
     }
-
-    input[type="text"]:focus {
-        border-color: #ff6347;
-    }
-
     button {
-        padding: 12px 20px;
-        background-color: #28a745;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 1.1em;
-        transition: background-color 0.3s ease;
-        margin-left: 10px;
+      padding: 10px 15px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
     }
-
-    button:hover {
-        background-color: #218838;
-    }
-
-    /* Updates Section */
     .updates {
-        margin: 40px auto;
-        padding: 20px;
-        max-width: 900px;
+      max-width: 700px;
+      margin: 20px auto;
+      padding: 10px;
     }
-
     .update-card {
-        background-color: white;
-        padding: 20px;
-        border-radius: 8px;
-        border: 1px solid #ddd;
-        margin-bottom: 20px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        transition: box-shadow 0.3s ease;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 15px;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
     }
-
-    .update-card:hover {
-        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
-    }
-
-    .update-card h3 {
-        color: #004085;
-        font-size: 1.5em;
-    }
-
-    .update-card p {
-        font-size: 1.1em;
-        color: #555;
-    }
-
-    /* Footer Styling */
     footer {
-        background-color: #333;
-        color: white;
-        padding: 15px;
-        text-align: center;
-        font-size: 1em;
-    }
-
-    /* Link Styling */
-    a {
-        color: #ff6347;
-        text-decoration: none;
-        font-weight: bold;
-    }
-
-    a:hover {
-        text-decoration: underline;
-    }
-
-    /* Mobile Responsiveness */
-    @media (max-width: 768px) {
-        .search input[type="text"] {
-            width: 80%;
-        }
-
-        button {
-            width: 100%;
-            margin-left: 0;
-        }
+      text-align: center;
+      background-color: #333;
+      color: white;
+      padding: 10px;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Immigration Resources in Massachusetts</h1>
-    <p>Stay informed about your rights and the latest state laws.</p>
+    <p>Learn about your rights and available services.</p>
   </header>
 
-  <section class="search">
-    <h2>Search for Updates</h2>
-    <input type="text" id="searchBar" placeholder="Search for a keyword..." />
+  <div class="search">
+    <input type="text" id="searchBar" placeholder="Search updates..." />
     <button onclick="searchUpdates()">Search</button>
-  </section>
+  </div>
 
-  <section class="updates">
+  <div class="updates">
     <div class="update-card">
-      <h3>Massachusetts State ID for Undocumented Immigrants</h3>
-      <p>
-        As of July 1, 2023, Massachusetts residents can apply for a driver’s license regardless of immigration status.
-        Learn more at <a href="https://www.mass.gov/info-details/work-and-family-mobility-act" target="_blank">Mass.gov</a>.
-      </p>
+      <h3>New Law: Driver’s Licenses for All</h3>
+      <p>Massachusetts allows undocumented residents to apply for driver’s licenses starting July 2023. <a href="https://www.mass.gov/info-details/work-and-family-mobility-act" target="_blank">Learn more</a>.</p>
     </div>
     <div class="update-card">
-      <h3>Legal Aid Resources</h3>
-      <p>
-        Free immigration legal support is available through organizations such as MIRA and the Massachusetts Legal
-        Assistance Corporation. <a href="https://www.miracoalition.org/" target="_blank">Find out more here.</a>
-      </p>
+      <h3>Free Legal Help</h3>
+      <p>Get support from organizations like MIRA and MLRI. <a href="https://www.miracoalition.org/" target="_blank">Visit MIRA Coalition</a>.</p>
     </div>
-  </section>
+  </div>
 
   <footer>
-    <p>© 2025 Immigration Resources. All Rights Reserved.</p>
+    <p>© 2025 Immigration Info. All rights reserved.</p>
   </footer>
 
   <script>
     function searchUpdates() {
-      const keyword = document.getElementById("searchBar").value.toLowerCase();
+      const input = document.getElementById("searchBar").value.toLowerCase();
       const cards = document.querySelectorAll(".update-card");
       cards.forEach(card => {
-        const text = card.innerText.toLowerCase();
-        card.style.display = text.includes(keyword) ? "block" : "none";
+        card.style.display = card.textContent.toLowerCase().includes(input) ? "block" : "none";
       });
     }
   </script>
