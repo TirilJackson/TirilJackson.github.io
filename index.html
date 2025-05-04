@@ -1,94 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Immigration Info</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f0f8ff;
-      color: #333;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background-color: #0069d9;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    .search {
-      text-align: center;
-      padding: 20px;
-    }
-    input[type="text"] {
-      padding: 10px;
-      width: 70%;
-      max-width: 400px;
-      border: 2px solid #28a745;
-      border-radius: 5px;
-    }
-    button {
-      padding: 10px 15px;
-      background-color: #28a745;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    .updates {
-      max-width: 700px;
-      margin: 20px auto;
-      padding: 10px;
-    }
-    .update-card {
-      background: white;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 20px;
-      margin-bottom: 15px;
-      box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
-    }
-    footer {
-      text-align: center;
-      background-color: #333;
-      color: white;
-      padding: 10px;
-    }
-  </style>
+  <title>Immigration Resources in Massachusetts</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Link to the CSS file in the css folder -->
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <header>
     <h1>Immigration Resources in Massachusetts</h1>
-    <p>Learn about your rights and available services.</p>
+    <p>Your source for the latest updates and legal information.</p>
   </header>
 
   <div class="search">
-    <input type="text" id="searchBar" placeholder="Search updates..." />
+    <input type="text" id="searchBar" placeholder="Search for a keyword...">
     <button onclick="searchUpdates()">Search</button>
   </div>
 
   <div class="updates">
     <div class="update-card">
-      <h3>New Law: Driver’s Licenses for All</h3>
-      <p>Massachusetts allows undocumented residents to apply for driver’s licenses starting July 2023. <a href="https://www.mass.gov/info-details/work-and-family-mobility-act" target="_blank">Learn more</a>.</p>
+      <h3>Driver’s Licenses for All</h3>
+      <p>Massachusetts now allows undocumented residents to apply for driver’s licenses as of July 2023. 
+         <a href="https://www.mass.gov/info-details/work-and-family-mobility-act" target="_blank">Learn more</a>.
+      </p>
     </div>
+
     <div class="update-card">
       <h3>Free Legal Help</h3>
-      <p>Get support from organizations like MIRA and MLRI. <a href="https://www.miracoalition.org/" target="_blank">Visit MIRA Coalition</a>.</p>
+      <p>Organizations like MIRA and MLRI provide support for immigrants. 
+         <a href="https://www.miracoalition.org/" target="_blank">Visit MIRA Coalition</a>.
+      </p>
     </div>
   </div>
 
   <footer>
-    <p>© 2025 Immigration Info. All rights reserved.</p>
+    <p>© 2025 Immigration Resources. All Rights Reserved.</p>
   </footer>
 
   <script>
     function searchUpdates() {
-      const input = document.getElementById("searchBar").value.toLowerCase();
+      const keyword = document.getElementById("searchBar").value.toLowerCase();
       const cards = document.querySelectorAll(".update-card");
       cards.forEach(card => {
-        card.style.display = card.textContent.toLowerCase().includes(input) ? "block" : "none";
+        const text = card.innerText.toLowerCase();
+        card.style.display = text.includes(keyword) ? "block" : "none";
       });
     }
   </script>
