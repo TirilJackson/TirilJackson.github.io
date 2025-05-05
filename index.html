@@ -4,20 +4,21 @@
   <meta charset="UTF-8">
   <title>Immigration Resources in Massachusetts</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Link to the CSS file in the css folder -->
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <header>
     <h1>Immigration Resources in Massachusetts</h1>
-    <p>Your source for the latest updates and legal information.</p>
+    <p>Your source for the latest updates, legal information, and case status checking.</p>
   </header>
 
+  <!-- Search for keywords in updates -->
   <div class="search">
     <input type="text" id="searchBar" placeholder="Search for a keyword...">
     <button onclick="searchUpdates()">Search</button>
   </div>
 
+  <!-- Updates section -->
   <div class="updates">
     <div class="update-card">
       <h3>Driver’s Licenses for All</h3>
@@ -34,10 +35,19 @@
     </div>
   </div>
 
+  <!-- Case Status Checker -->
+  <section class="case-status-section">
+    <h2>Check Your Immigration Case Status</h2>
+    <input type="text" id="receiptNumber" placeholder="Enter Receipt Number">
+    <button onclick="checkCaseStatus()">Check Status</button>
+    <p id="caseStatus">Waiting for case status...</p>
+  </section>
+
   <footer>
     <p>© 2025 Immigration Resources. All Rights Reserved.</p>
   </footer>
 
+  <!-- Search function -->
   <script>
     function searchUpdates() {
       const keyword = document.getElementById("searchBar").value.toLowerCase();
@@ -48,5 +58,9 @@
       });
     }
   </script>
+
+  <!-- Case Status function -->
+  <script src="script.js"></script>
+
 </body>
 </html>
